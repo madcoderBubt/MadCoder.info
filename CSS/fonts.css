@@ -1,0 +1,17 @@
+@font-face 
+{
+    font-family: paragraphText;
+    src: url(../Fonts/Bahamas/BAHAMASN.TTF);
+}
+
+@font-face 
+{
+    font-family: headerText;
+    src: url(../Fonts/RockWell/ROCKB.TTF)
+}
+
+@font-face
+{
+    font-family: titleText;
+    src: url(../Fonts/roboto/Roboto-Regular.ttf)
+}
