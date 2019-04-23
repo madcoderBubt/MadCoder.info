@@ -128,6 +128,13 @@ p > small{
 .navbar{
     height: 600px;
 }
+.navbar > ul > li > a{
+    display: block;
+}
+.navbar > ul > li:hover > a{
+    background: #ffffff;
+    color: #336699;
+}
 .mainPage {
     width: 700px;
     height: 600px;
@@ -159,7 +166,7 @@ figcaption > span{
 .socialLinks > div {
     width: 40px;
     height: 40px;
-    line-height: 40px;
+    line-height: 36px;
     display: inline-block;
     text-align: center;
     font-size: x-large;
@@ -169,6 +176,11 @@ figcaption > span{
 }
 .socialLinks > div > a{
     color: #e9e9e9;
+    display: block;
+}
+.socialLinks > div:hover > a{
+    background: #ffffff;
+    color: #336699;
 }
 .sidePage .marginDown{
     margin-bottom: 1.5pc;
