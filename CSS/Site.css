@@ -25,6 +25,7 @@ blockquote{
     border-left: 8px solid #336699;
     padding-left: 7px;
     margin: 15px 0;
+    font-family: "paragraphText";
 }
 footer
 {
