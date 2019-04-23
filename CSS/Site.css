@@ -12,10 +12,15 @@ body, header, section, footer, aside, nav, main, article, figure
     display: block;
     width: inherit;
 }
+main{
+    margin: 10px 15px;
+    width: initial;
+}
 footer
 {
     text-align: center;
     font-family: "paragraphText";
+    color: lightblue;
 }
 hr{
     margin: 10px 0;
@@ -184,4 +189,19 @@ figcaption > span{
 }
 .sidePage .marginDown{
     margin-bottom: 1.5pc;
+}
+.mainPage section > header{
+    padding-bottom: 8px;
+    border-bottom: 1px solid #e9e9e9;
+}
+.mainPage section > header > h1{
+    font-size: 25px;
+    vertical-align: middle;
+    display: flex;
+    line-height: 40px;
+    font-family: headerText;
+    font-variant: small-caps;
+}
+.mainPage section > header > h1 > i{
+    font-size: 40px;
 }
