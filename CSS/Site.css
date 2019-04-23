@@ -7,14 +7,24 @@ body{
     background: url(../Content/bg-tx-f.jpg) 0 0 no-repeat fixed;
     background-size: cover;
 }
-body, header, section, footer, aside, nav, main, article, figure
+body, header, section, footer, aside, nav, main, article, figure,blockquote
 {
     display: block;
     width: inherit;
 }
+h1,h2,h3,h4,h5,h6{
+    font-family: titleText;
+    text-transform: uppercase;
+}
 main{
     margin: 10px 15px;
     width: initial;
+}
+blockquote{
+    width: 50%;
+    border-left: 8px solid #336699;
+    padding-left: 7px;
+    margin: 15px 0;
 }
 footer
 {
@@ -23,7 +33,13 @@ footer
     color: lightblue;
 }
 hr{
-    margin: 10px 0;
+    height: 1px;
+    border: 0;
+    background-color: #e9e9e9;
+}
+table,tr,td,th{
+    border: 0;
+    border-collapse: collapse;
 }
 /*Background Coloring*/
 .bgBlue{
@@ -125,6 +141,19 @@ p{
 p > small{
     font-size: small;
 }
+/*Scroll Property*/
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey; 
+}
+::-webkit-scrollbar-thumb {
+    background: #336699; 
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #333333; 
+}
 
 /*Extra Properties*/
 .sideMenuBar{
@@ -145,7 +174,10 @@ p > small{
     height: 600px;
     margin: 0 15px;
     box-shadow: 0 0 5px #e9e9e9;
-    background-color: #ffffff
+    background-color: #ffffff;
+    overflow-x: hidden;
+    overflow-y: scroll;
+
 }
 .sidePage {
     width: 300px;
@@ -201,7 +233,35 @@ figcaption > span{
     line-height: 40px;
     font-family: headerText;
     font-variant: small-caps;
+    text-transform: capitalize;
 }
 .mainPage section > header > h1 > i{
     font-size: 40px;
+}
+section > h3.title{
+    font-size: 35px;
+    color: #336699;
+    padding-top: 40px;
+}
+section > hr.title{
+    margin-bottom: 15px;
+}
+section > table{
+    border: 0;
+}
+section > table tr{
+    height: 35px;
+    border-bottom: 1px solid #e9e9e9;
+    vertical-align: bottom;
+}
+section > table th{
+    color: #336699;
+    text-align: left;
+    width: 8pc;
+    font-family: headerText;
+    font-style: italic;
+}
+section > table td{
+    color: #333333;
+    font-family: paragraphText;
 }
