@@ -265,3 +265,48 @@ section > table td{
     color: #333333;
     font-family: paragraphText;
 }
+
+
+/* Form Design */
+.formGroup{
+    overflow: hidden;
+    position: relative;
+    margin: 11px 0;
+}
+.formGroup:focus-within > i,
+.formGroup:hover > i{
+    color: #333333;
+}
+.formGroup > i{
+    position: absolute;
+    top: 6px;
+    left: 2px;
+    color: #336699;
+}
+.formField{
+    border: none;
+    width: 250px;
+    height: 30px;
+    border-bottom: 2px solid #336699;
+    padding-left: 25px;
+    line-height: 30px;
+}
+.formField:hover,
+.formField:focus{
+    outline: none;
+    border-bottom-color: #333333;
+}
+textarea.formField{
+    height: 100px;
+}
+input[type="submit"] {
+    border: none;
+    width: 150px;
+    height: 30px;
+    background: #336699;
+    color: #ffffff;
+}
+input[type="submit"]:hover{
+    background: #333333;
+
+}
