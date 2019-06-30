@@ -79,6 +79,25 @@ ul > li.bgWhite a,
     float: left;
     margin: 0px 5px;
 }
+.col-2{
+    width: 20%;
+    float: left;
+}
+.col-4{
+    width: 40%;
+    float: left;
+}
+.col-6{
+    width: 60%;
+    float: left;
+}
+.col-8{
+    width: 80%;
+    float: left;
+}
+div[class*="col-"]{
+    padding: 0 5px;
+}
 .center{
     text-align: center;
 }
@@ -309,4 +328,9 @@ input[type="submit"] {
 input[type="submit"]:hover{
     background: #333333;
 
+}
+main div.bgCon{
+    background: url(../content/bg-contact.jpg);
+    height: -webkit-fill-available;
+    color: white;
 }
