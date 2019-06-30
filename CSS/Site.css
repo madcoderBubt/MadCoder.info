@@ -330,7 +330,7 @@ input[type="submit"]:hover{
 
 }
 main div.bgCon{
-    background: url(../content/bg-contact.jpg);
+    background: url(../Content/bg-contact.jpg);
     height: -webkit-fill-available;
     color: white;
 }
