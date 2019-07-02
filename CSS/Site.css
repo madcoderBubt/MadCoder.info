@@ -346,11 +346,8 @@ input[type="submit"] {
     color: #ffffff;
     display: block;
     margin: auto;
-<<<<<<< HEAD
     font-family: titleText;
     text-transform: capitalize;
-=======
->>>>>>> 5defd64e6803170368f43a2db17914cc578452d4
 }
 input[type="submit"]:hover{
     background: #333333;
@@ -367,19 +364,11 @@ main div.bgCon{
     padding: 40px 25px;
     word-break: break-word;
     font-family: paragraphText;
-<<<<<<< HEAD
 }
 .group > h5{
     text-transform: capitalize;
     padding-bottom: 5px;
 }
-=======
-}
-.group > h5{
-    text-transform: capitalize;
-    padding-bottom: 5px;
-}
->>>>>>> 5defd64e6803170368f43a2db17914cc578452d4
 .bgCon > .group > a{
     color: #e9e9e9;
     text-decoration: none;
