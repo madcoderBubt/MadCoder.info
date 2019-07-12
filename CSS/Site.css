@@ -319,7 +319,7 @@ section > table td{
     color: #336699;
 }
 .formField {
-    border: none;
+    border: 1px solid lightgray;
     width: 100%;
     height: 30px;
     border-bottom: 2px solid #336699;
@@ -328,7 +328,7 @@ section > table td{
     background-color: #e9e9e9;
     font-family: paragraphText;
     font-weight: bold;
-    /* border-radius: 5px; */
+    border-radius: 2px;
 }
 .formField:hover,
 .formField:focus{
@@ -372,4 +372,95 @@ main div.bgCon{
 .bgCon > .group > a{
     color: #e9e9e9;
     text-decoration: none;
+}
+
+
+/*Progress Bar*/
+progress[value] {
+    /* Reset the default appearance */
+    -webkit-appearance: none;
+     appearance: none;
+  
+    width: 250px;
+    height: 20px;
+  }
+  progress[value]::-webkit-progress-bar {
+    background-color: #eee;
+    border-radius: 2px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
+  }
+  progress[value]::-webkit-progress-value {
+    background-color: #336699;  
+      border-radius: 2px; 
+      background-size: 35px 20px, 100% 100%, 100% 100%;
+      
+  }
+
+  /*
+    Circular Pie Chart
+    Progress Bar in percentage
+  */
+  .pie {
+    background-color: #dae7f7;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+    position: relative;
+    float: left;
+    margin: 20px;
+}
+.pie > div {
+    float: left;
+    width: 50%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+.pie span {
+    background-color: #77aaf4;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+    .pie .left span {
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+        -webkit-transform-origin: 100% 50%;
+    }
+    .pie .right span {
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+        -webkit-transform-origin: 0% 50%;
+    }
+.pie:before,
+.pie:after {
+    border-radius: 50%;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+}
+.pie:before {
+    background-color: #fff;
+    content: "";
+    width: 75%;
+    height: 75%;
+    z-index: 100;
+}
+.pie:after {
+    content: attr(data-percent) "%";
+    font-family: paragraphText;
+    font-size: 1.5em;
+    font-weight: bold;
+    z-index: 200;
+    text-align: center;
+}
+
+.skill_summary {
+    background-color: azure;
+    display: table;
+    border: 2px solid lightblue;
+    margin: 10px auto;
 }
