@@ -381,8 +381,9 @@ progress[value] {
     -webkit-appearance: none;
      appearance: none;
   
-    width: 300px;
+    width: 100%;
     height: 10px;
+    vertical-align: baseline;
   }
   progress[value]::-webkit-progress-bar {
     background-color: #eee;
@@ -473,4 +474,22 @@ progress[value] {
     display: inline-flex;
     flex-direction: column;
     width: min-content;
+}
+
+/*skill_details*/
+.skill_details > table{
+    width:100%;
+}
+.skill_details > table th{
+    text-align: start;
+}
+.skill_details > table > tbody  th{
+    width: 30%;
+}
+.skill_details > table > tbody th > span{
+    float: right;
+    padding-right: 5px;
+}
+.skill_details > table > tbody  td{
+    width: 70%;
 }
