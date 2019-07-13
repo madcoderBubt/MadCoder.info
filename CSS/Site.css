@@ -481,9 +481,20 @@ progress[value] {
     width:100%;
 }
 .skill_details > table th{
-    text-align: start;
+    text-align: left;
+}
+.skill_details > table > tbody tr{
+    border: 10px solid transparent;
+}
+.skill_details > table > thead th {
+    font-family: headerText;
+    font-size: 22px;
+    font-style: oblique;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #e9e9e9;
 }
 .skill_details > table > tbody  th{
+    font-family: titleText;
     width: 30%;
 }
 .skill_details > table > tbody th > span{
