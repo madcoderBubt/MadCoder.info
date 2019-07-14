@@ -505,3 +505,16 @@ progress[value] {
     width: 70%;
     font-family: titleText;
 }
+
+
+
+.MC {
+    background-image: url("../Content/MC-logo.png");
+    position: absolute;
+    left: 22px;
+    top: 202px;
+    width: 672px;
+    height: 262px;
+    z-index: 7;
+  }
+  
