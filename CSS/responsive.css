@@ -1,4 +1,4 @@
-@media only screen and (min-width:768px) and (max-width: 1000px){
+@media only screen and (max-width: 1000px){
 
 [class*="sample-"]{
     display: none;
@@ -14,9 +14,21 @@
 .sidePage{
     width: 250px;
 }
+.col-5{
+    width: 100%;
+    margin-top: 5px;
+}
+#pageIn > section{
+    display: flex;
+    flex-direction: column;
+}
+.skill_details > table > tbody  th,
+.skill_details > table > tbody  td{
+    width: 50%;
+}
 
 }
-@media only screen and (min-width:425px) and (max-width:767px){
+@media only screen and (max-width:767px){
 
     [class*="sample-"]{
         display: none;
@@ -88,12 +100,5 @@
     .sideMenuBar .navbar-bottom{
         display: none;
     }
-    .col-5{
-        width: 100%;
-        margin-top: 5px;
-    }
-    #pageIn > section{
-        display: flex;
-        flex-direction: column;
-    }
+
 }
