@@ -505,6 +505,10 @@ progress[value] {
     width: 70%;
     font-family: titleText;
 }
+table.skills > tbody th,
+table.skills > tbody td{
+    width:50%; 
+}
 
 
 
