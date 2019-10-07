@@ -39,7 +39,8 @@ hr{
 }
 table,tr,td,th{
     border: 0;
-    border-collapse: collapse;
+    padding: 4px 2px;
+    /*border-collapse: collapse;*/
 }
 /*Background Coloring*/
 .bgBlue{
@@ -469,6 +470,7 @@ progress[value] {
     text-align: center;
     text-transform: uppercase;
     font-weight: bold;
+    font-family: paragraphText, cursive;
 }
 .pie-group {
     display: inline-flex;
@@ -494,7 +496,7 @@ progress[value] {
     border-bottom: 1px solid #e9e9e9;
 }
 .skill_details > table > tbody  th{
-    font-family: titleText;
+    font-family: paragraphText, cursive;
     width: 30%;
 }
 .skill_details > table > tbody th > span{
@@ -503,11 +505,14 @@ progress[value] {
 }
 .skill_details > table > tbody  td{
     width: 70%;
-    font-family: titleText;
+    font-family: 'Courier New', Courier, monospace;
 }
 table.skills > tbody th,
 table.skills > tbody td{
     width:50%; 
+}
+table.skills > tbody th{
+    border-bottom: 1px dashed blueviolet;
 }
 
 
