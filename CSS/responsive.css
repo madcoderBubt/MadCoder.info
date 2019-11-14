@@ -62,13 +62,14 @@
         display: none;
     }
 }
-@media only screen and (max-width:424px){
+/*Mini Devices (smaller than 424px*/
+@media only screen and (max-width:550px){
 
     [class*="sample-"]{
         display: none;
     }
     .page{
-        width: 375px;
+        width: 100%;
         height: auto;
     }
     .page > div.row{
@@ -79,20 +80,24 @@
         margin: 0;
     }
     .mainPage{
-        width: 375px;
+        width: 100%;
         margin: 0;
         order: 3;
+        height: auto;
+        overflow: unset;
     }
     .sideMenuBar{
         width: 375px;
         order: 1;
-        display: none;
+        display: block;
+        margin:auto;
     }
     .sidePage{
-        width: 375px;
+        width: 100%;
         height: auto;
         order: 2;
         padding-bottom: 5px;
+        display:none;
     }
     .sideMenuBar > .navbar{
         height: auto;

@@ -5,6 +5,7 @@
     position: relative;
     max-width: 1200px;
     margin: 0 auto;
+    background-color: dimgray;
   }
   
   /* The actual timeline (the vertical ruler) */
@@ -44,11 +45,13 @@
   /* Place the container to the left */
   .left {
     left: 0;
+    padding-left: 10px;
   }
   
   /* Place the container to the right */
   .right {
     left: 50%;
+    padding-right: 10px;
   }
   
   /* Add arrows to the left container (pointing right) */
@@ -76,7 +79,7 @@
     left: 30px;
     border: medium solid #333333;
     border-width: 10px 10px 10px 0;
-    border-color: transparent #333333 transparent transparent;
+    border-color: transparent #333333 transparent transparent !important;
   }
   
   /* Fix the circle for containers on the right side */
@@ -87,13 +90,14 @@
   /* The actual content */
   .right > .content{
       background-color: #333333;
+      color: lightgrey;
   }
   .content {
-    padding: 20px 30px;
+    padding: 20px 10px;
     background-color: #336699;
     position: relative;
     border-radius: 6px;
-    color: cornsilk;
+    color: lightblue;
   }
   
   /* Media queries - Responsive timeline on screens less than 600px wide */
@@ -113,9 +117,9 @@
   /* Make sure that all arrows are pointing leftwards */
     .container::before {
       left: 60px;
-      border: medium solid white;
+      border: medium solid #336699;
       border-width: 10px 10px 10px 0;
-      border-color: transparent white transparent transparent;
+      border-color: transparent #336699 transparent transparent;
     }
   
   /* Make sure all circles are at the same spot */
