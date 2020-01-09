@@ -5,7 +5,8 @@
     position: relative;
     max-width: 1200px;
     margin: 0 auto;
-    background-color: dimgray;
+    background-color: #f0f8ff; /*AliceBlue*/
+    border: 1px solid lightgrey;
   }
   
   /* The actual timeline (the vertical ruler) */
@@ -102,6 +103,9 @@
   
   /* Media queries - Responsive timeline on screens less than 600px wide */
   @media screen and (max-width: 600px) {
+    .timeline{
+      background-color: dimgray;
+    }
   /* Place the timelime to the left */
     .timeline::after {
       left: 31px;
