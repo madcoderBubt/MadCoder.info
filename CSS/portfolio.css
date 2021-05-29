@@ -28,7 +28,7 @@ article.galleryView > header{
     position: absolute;
     top: 0;
     left: 0;
-    /* background: rgb(50 50 50 / 50%); */
+    background: rgb(51 102 153 / 50%);
     width: -webkit-fill-available;
     height: -webkit-fill-available;
     margin: 10px;
@@ -39,9 +39,18 @@ article.galleryView > header{
      0 6px 20px 0 rgb(0 0 0 / 19%);
     backdrop-filter: blur(2px);
 }
+.galleryBox a{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    text-align: center;
+    /* align-content: center; */
+    align-items: center;
+}
 .galleryBox,
 .galleryBox  a{
     color: #fff;
+    text-decoration: none;
 }
 .galleryBox:hover .overlay{
     display: block;

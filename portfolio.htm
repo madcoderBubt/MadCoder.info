@@ -13,7 +13,9 @@
         <link rel="stylesheet" type="text/css" href="CSS/fonts.css" />
         <link rel="stylesheet" href="Fonts/fa/css/all.min.css">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" 
-            integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+            integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous"/>
+        
+        <link rel="stylesheet" href="plugins/css/yBox.min.css">
         <link rel="stylesheet" type="text/css" href="CSS/Site.css"/>
         <link rel="stylesheet" type="text/css" href="CSS/responsive.css"/>
         <link rel="stylesheet" href="CSS/portfolio.css">
@@ -53,37 +55,37 @@
                                     <div class="galleryBox">
                                         <img src="Content/gallery/img_1.jpg" alt="" srcset="">
                                         <div class="overlay">
-                                            <a href="https://github.com">Click</a>
+                                            <a href="https://github.com"><i class="fas fa-eye"></i></a>
                                         </div>
                                     </div>
                                     <div class="galleryBox">
                                         <img src="Content/gallery/img_3.jpg" alt="" srcset="">
                                         <div class="overlay">
-                                            <a href="https://github.com">Click</a>
+                                            <a href="https://github.com"><i class="fas fa-eye"></i></a>
                                         </div>
                                     </div>
                                     <div class="galleryBox">
                                         <img src="Content/gallery/img_1.jpg" alt="" srcset="">
                                         <div class="overlay">
-                                            <a href="https://github.com">Click</a>
+                                            <a href="https://github.com"><i class="fas fa-eye"></i></a>
                                         </div>
                                     </div>
                                     <div class="galleryBox">
                                         <img src="Content/gallery/img_2.jpg" alt="" srcset="">
                                         <div class="overlay">
-                                            <a href="https://github.com">Click</a>
+                                            <a href="https://github.com"><i class="fas fa-eye"></i></a>
                                         </div>
                                     </div>
                                     <div class="galleryBox">
                                         <img src="Content/gallery/img_1.jpg" alt="" srcset="">
                                         <div class="overlay">
-                                            <a href="https://github.com">Click</a>
+                                            <a href="https://github.com"><i class="fas fa-eye"></i></a>
                                         </div>
                                     </div>
                                     <div class="galleryBox" style="display: none;">
                                         <img src="Content/gallery/img_3.jpg" alt="" srcset="">
                                         <div class="overlay">
-                                            <a href="https://github.com">Click</a>
+                                            <a href="https://github.com"><i class="fas fa-eye"></i></a>
                                         </div>
                                     </div>
                                 </div> 
@@ -100,37 +102,37 @@
                                     <div class="galleryBox">
                                         <img src="Content/gallery/img_1.jpg" alt="" srcset="">
                                         <div class="overlay">
-                                            <a href="https://github.com">Click</a>
+                                            <a href="Content/gallery/img_1.jpg" data-ybox-group="group1" class="yBox"><i class="fas fa-eye"></i></a>
                                         </div>
                                     </div>
                                     <div class="galleryBox">
                                         <img src="Content/gallery/img_3.jpg" alt="" srcset="">
                                         <div class="overlay">
-                                            <a href="https://github.com">Click</a>
+                                            <a href="https://github.com"><i class="fas fa-eye"></i></a>
                                         </div>
                                     </div>
                                     <div class="galleryBox">
                                         <img src="Content/gallery/img_1.jpg" alt="" srcset="">
                                         <div class="overlay">
-                                            <a href="https://github.com">Click</a>
+                                            <a href="https://github.com"><i class="fas fa-eye"></i></a>
                                         </div>
                                     </div>
                                     <div class="galleryBox">
                                         <img src="Content/gallery/img_2.jpg" alt="" srcset="">
                                         <div class="overlay">
-                                            <a href="https://github.com">Click</a>
+                                            <a href="https://github.com"><i class="fas fa-eye"></i></a>
                                         </div>
                                     </div>
                                     <div class="galleryBox">
                                         <img src="Content/gallery/img_1.jpg" alt="" srcset="">
                                         <div class="overlay">
-                                            <a href="https://github.com">Click</a>
+                                            <a href="https://github.com"><i class="fas fa-eye"></i></a>
                                         </div>
                                     </div>
                                     <div class="galleryBox" style="display: none;">
                                         <img src="Content/gallery/img_3.jpg" alt="" srcset="">
                                         <div class="overlay">
-                                            <a href="https://github.com">Click</a>
+                                            <a href="https://github.com"><i class="fas fa-eye"></i></a>
                                         </div>
                                     </div>
                                 </div> 
@@ -177,10 +179,19 @@
         </div><!--Page-->
 
         <!--Javascript-->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> 
+
+        <script src="plugins/js/directive.js"></script>
+        <script src="plugins/js/yBox.min.js"></script>
+
         <script src="js/custom.js"></script>
         <script>
-            
+            window.onload = function(){
+                if(document.querySelector('.yBox')){
+                let myYbox = new yBox();
+                myYbox.init();
+                }
+            };
         </script>
     </body>
 </html>
