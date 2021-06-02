@@ -20,7 +20,7 @@
     </head>
 
     <body>
-        <div class="page">
+        <div class="page" ng-app="myApp">
             <div class="row clearfix">
                 <div class="column sideMenuBar">
                     <nav class="navbar navbar-vertical">
@@ -129,9 +129,49 @@
 
         <!--Javascript-->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
         <script src="js/custom.js"></script>
         <script>
-            
+            $(document).ready(function (){
+
+                //load
+                //var url = "https://madcoderbubt.github.io/MadCoderPersonal/Data/about.json";
+                //$.getJSON(url, function(data){
+                //    console.log(data);
+                //});
+
+            });
+
+            var app = angular.module('myApp', []);
+            app.controller('myCtrl', function($scope,$http) {
+                $scope.info = "";
+                $scope.objectives = "";
+                var item = null;
+
+                var url = "https://madcoderbubt.github.io/MadCoderPersonal/Data/about.json";
+                $http.get(url)
+                .then(function(response){
+                    $scope.info = response.data.data.info;
+                    $scope.objectives = response.data.data.objectives;
+                    //console.log(response.data.data);
+                });
+                //console.log($scope.info);
+            });
+            app.controller('ctrlMe', function($scope,$http) {
+                $scope.info = "";
+                $scope.objectives = "";
+                var item = null;
+
+                var url = "https://madcoderbubt.github.io/MadCoderPersonal/Data/me.json";
+                $http.get(url)
+                .then(function(response){
+                    $scope.info = response.data.data.info;
+                    $scope.socialLinks = response.data.data.socialLinks;
+                    //console.log(response.data.data);
+                });
+                //console.log($scope.info);
+            });
+
         </script>
     </body>
 </html>
