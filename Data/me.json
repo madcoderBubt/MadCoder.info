@@ -1,31 +1,33 @@
 {
     "title":"about me",
     "data":{
-        "fName":"Sudhananda Biswas",
-        "designation":".net developer",
-        "objective":"As a self-taught Developer, I always loves to stay connected with new technologies. Mean-while working with C# & .NET framework since 2015 and 1+ years in ASP.NET MVC makes me more comfortable as a Web Developer.",
-        "address":"Mirpur, Dhaka",
-        "avatar":"Content/avatar.jpg",
+        "info":{
+            "fName":"Sudhananda Biswas",
+            "designation":".net developer",
+            "objective":"Hi, I am Sudhananda Biswas, a .NET Developer(C#, ASP). I have been working on C# language since 2016. Working with ASP .NET has been 2 years passed since 2017 and still learning.",
+            "address":"Mirpur, Dhaka",
+            "avatar":"/Content/avatar.jpg"
+        },
         "socialLinks":[
             {
                 "title":"Facebook",
-                "icon":"",
+                "icon":"fab fa-facebook-f",
                 "link":"https://www.facebook.com/madcoderBUBT/"
             },{
                 "title":"Twitter",
-                "icon":"",
+                "icon":"fab fa-twitter",
                 "link":"https://twitter.com/shbsovon"
             },{
                 "title":"LinkedIn",
-                "icon":"",
+                "icon":"fab fa-linkedin-in",
                 "link":"http://linkedin.com/in/MadCoder-bubt"
             },{
                 "title":"Github",
-                "icon":"",
+                "icon":"fab fa-github",
                 "link":"https://github.com/MadCoderBubt"
             },{
                 "title":"Skype",
-                "icon":"",
+                "icon":"fab fa-skype",
                 "link":"skype:shbsovon"
             }
         ]

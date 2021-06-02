@@ -19,7 +19,7 @@
     </head>
 
     <body>
-        <div class="page">
+        <div class="page" ng-app="myApp">
             <div class="row clearfix">
                 <div class="column sideMenuBar">
                     <nav class="navbar navbar-vertical">
@@ -38,7 +38,7 @@
                 </div><!--Side Menu Bar-->
 
                 <div class="column mainPage">
-                    <main id="pageIn">
+                    <main id="pageIn"  ng-controller="myCtrl">
                         <section>
                             <header class="txtBlue"><h1><i class="fas fa-plus-circle"></i>&ThickSpace; About Me</h1></header>
                             <h3 class="title">Mad Coder</h3>
@@ -48,14 +48,18 @@
                             <img class="sample-pic" src="Content/side-pic.jpg" style="width:44%;float:right"/>
                             <table>
                                 <tbody>
-                                    <tr><th>Name</th><td>Sudhananda Biswas</td></tr>
-                                    <tr><th>Date of Birth</th><td>28 February, 1996</td></tr>
-                                    <tr><th>Email</th><td>sudhanandabiswas@yahoo.com</td></tr>
-                                    <tr><th>Skype</th><td>shbsovon</td></tr>
-                                    <tr><th>Phone</th><td>+88016********</td></tr>
-                                    <tr><th>Website</th><td>shbsovon.blogspot.com</td></tr>
+                                    <tr><th>Name</th><td>{{info.name}}</td></tr>
+                                    <tr><th>Date of Birth</th><td>{{info.birthDate}}</td></tr>
+                                    <tr><th>Email</th><td>{{info.email}}</td></tr>
+                                    <tr><th>Skype</th><td>{{info.skype}}</td></tr>
+                                    <tr><th>Phone</th><td>{{info.phone}}</td></tr>
+                                    <tr><th>Website</th><td>{{info.website}}</td></tr>
                                 </tbody>
                             </table>
+                            <blockquote ng-repeat="obj in objectives">
+                                {{obj.objective}}
+                            </blockquote>
+                            <!--
                             <blockquote>
                                 Hi, I am Sudhananda Biswas, a .NET Developer(C#, ASP). I have been working on 
                                 C# language since 2016. Working with ASP .NET has been 2 years passed since 2017 
@@ -66,34 +70,36 @@
                                 working with C# & .NET framework since 2015 and 1+ years in ASP.NET MVC makes me more comfortable 
                                 as a Web Developer.
                             </blockquote>
+                            -->
                         </section>
                     </main>
                 </div>
 
-                <div class="column sidePage">
+                <div class="column sidePage" ng-controller="ctrlMe">
                     <section class="">
                         <figure>
-                            <img src="Content/avator.jpg" alt="avator">
+                            <img src="{{info.avatar}}" alt="avator">
                             <figcaption class="txtWhite txtUpper">
-                                <h3>Sudhananda Biswas</h3>
-                                <span>.Net Developer</span>
+                                <h3>{{info.fName}}</h3>
+                                <span>{{info.designation}}</span>
                             </figcaption>
                         </figure>
                         <p class="txtWhite marginDown">
-                            Hi, I am Sudhananda Biswas, a .NET Developer(C#, ASP). I have been working on 
-                            C# language since 2016. Working with ASP .NET has been 2 years passed since 2017 
-                            and still learning.
+                            {{info.objective}}
                         </p>
                         <hr class="centerItem" style="width:50%">
-                        <p class="txtWhite center"><i class="fas fa-map-marker-alt"></i>&ThickSpace; Mirpur, Dhaka</p>
+                        <p class="txtWhite center"><i class="fas fa-map-marker-alt"></i>&ThickSpace; {{info.address}}</p>
                         <hr class="centerItem marginDown" style="width:50%">
                         <p class="txtWhite center"><small>My Social Link</small></p>
                         <div class="socialLinks">
+                            <div title="{{item.title}}" ng-repeat="item in socialLinks"><a href="{{item.link}}" target="_blank" ><i class="{{item.icon}}"></i></a></div>
+                            <!--
                             <div title="Facebook"><a href="http://facebook.com/MadCoderBubt" target="_blank" ><i class="fab fa-facebook-f"></i></a></div>
                             <div title="Twitter"><a href="http://twitter.com/shbsovon" target="_blank" ><i class="fab fa-twitter"></i></a></div>
                             <div title="LinkedIn"><a href="http://linkedin.com/in/MadCoder-bubt" target="_blank" ><i class="fab fa-linkedin-in"></i></a></div>
                             <div title="Github"><a href="http://github.com/MadCoderBubt" target="_blank" ><i class="fab fa-github"></i></a></div>
                             <div title="Skype"><a href="skype:shbsovon" target="_blank" ><i class="fab fa-skype"></i></a></div>
+                            -->
                         </div>
                     </section>
                 </div>
@@ -105,17 +111,49 @@
 
         <!--Javascript-->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
         <script src="js/custom.js"></script>
         <script>
             $(document).ready(function (){
 
                 //load
-                var url = "C:\\Users\\ar\\Desktop\\My Portfolio\\MadCoderPersonal - V2.0\\Data\\about.json";
-                $.get(url, function(data){
-                    console.log(data);
-                });
+                //var url = "https://madcoderbubt.github.io/MadCoderPersonal/Data/about.json";
+                //$.getJSON(url, function(data){
+                //    console.log(data);
+                //});
 
             });
+
+            var app = angular.module('myApp', []);
+            app.controller('myCtrl', function($scope,$http) {
+                $scope.info = "";
+                $scope.objectives = "";
+                var item = null;
+
+                var url = "https://madcoderbubt.github.io/MadCoderPersonal/Data/about.json";
+                $http.get(url)
+                .then(function(response){
+                    $scope.info = response.data.data.info;
+                    $scope.objectives = response.data.data.objectives;
+                    //console.log(response.data.data);
+                });
+                //console.log($scope.info);
+            });
+            app.controller('ctrlMe', function($scope,$http) {
+                $scope.info = "";
+                $scope.objectives = "";
+                var item = null;
+
+                var url = "https://madcoderbubt.github.io/MadCoderPersonal/Data/me.json";
+                $http.get(url)
+                .then(function(response){
+                    $scope.info = response.data.data.info;
+                    $scope.socialLinks = response.data.data.socialLinks;
+                    //console.log(response.data.data);
+                });
+                //console.log($scope.info);
+            });
+
         </script>
     </body>
 </html>
