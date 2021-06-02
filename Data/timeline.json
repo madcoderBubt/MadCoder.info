@@ -1,0 +1,54 @@
+{
+    "title":"timeline",
+    "data":[
+        {
+            "date":"Jan, 2012",
+            "position":"SSC",
+            "company":"MGHS",
+            "location":"Magura",
+            "details":"Completed..."
+        },{
+            "date":"Jun, 2016",
+            "position":"Jr. Trainer",
+            "company":"Engineer's IT",
+            "location":"Jessore",
+            "details":"Part-time Trainer of Basic Web Development"
+        },{
+            "date":"Nov, 2016",
+            "position":"Intern",
+            "company":"New Horizon CLC",
+            "location":"Dhaka",
+            "details":"Programming in C# with ASP .Net MVC"
+        },{
+            "date":"Feb, 2017",
+            "position":"Diploma in CTech",
+            "company":"JPI",
+            "location":"Jessore",
+            "details":"Attend various projects"
+        },{
+            "date":"Sep, 2019",
+            "position":"Software Engineer(Contructual)",
+            "company":"Asian Software Firm",
+            "location":"Dhaka",
+            "details":"Develop & maintain existing software"
+        },{
+            "date":"Mar, 2021",
+            "position":"Software Developer",
+            "company":"Standard Technology Development Ltd",
+            "location":"Dhaka",
+            "details":"Develop Software & Web Application"
+        },{
+            "date":"Jun, 2021",
+            "position":"Intern .Net Developer",
+            "company":"Ajkerdeal.com Ltd",
+            "location":"Dhaka",
+            "details":"Maintaining their existing website under a professional IT Team"
+        },{
+            "date":"Dec, 2021",
+            "position":"BSc Eng. in CSE",
+            "company":"BUBT",
+            "location":"Dhaka",
+            "details":"Running....."
+        }
+    ]
+}
