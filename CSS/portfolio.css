@@ -15,7 +15,7 @@ article.galleryView > header{
 .galleryBox{
     position: relative;
     overflow: hidden;
-    flex: 1 1 33%;
+    flex: 1 1 25%;
 }
 .galleryBox img{
     min-height: 100%;
@@ -54,4 +54,9 @@ article.galleryView > header{
 }
 .galleryBox:hover .overlay{
     display: block;
+}
+@media (max-width: 860px) {
+    .galleryBox{
+        flex: 1 1 33.3%;
+    }
 }

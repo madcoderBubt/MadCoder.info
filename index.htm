@@ -107,7 +107,15 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="js/custom.js"></script>
         <script>
-            
+            $(document).ready(function (){
+
+                //load
+                var url = "C:\\Users\\ar\\Desktop\\My Portfolio\\MadCoderPersonal - V2.0\\Data\\about.json";
+                $.get(url, function(data){
+                    console.log(data);
+                });
+
+            });
         </script>
     </body>
 </html>
