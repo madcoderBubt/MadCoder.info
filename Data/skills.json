@@ -31,7 +31,7 @@
         }
     ],
     "additionalSkills":{
-        "Dev Frameworks":[
+        "DevFrameworks":[
             {
                 "name":".Net Framework"
             },{
@@ -44,7 +44,7 @@
                 "name":"Entity Framework"
             }
         ],
-        "Graphics Design":[
+        "GraphicsDesign":[
             {
                 "name":"Adobe Photoshop"
             },{

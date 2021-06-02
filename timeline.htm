@@ -38,19 +38,20 @@
                     </nav>
                 </div><!--Side Menu Bar-->
 
-                <div class="column mainPage">
+                <div class="column mainPage" ng-controller="myCtrl">
                     <main id="pageIn">
                         <section>
                             <header class="txtBlue"><h1><i class="fas fa-plus-circle"></i>&ThickSpace; My TimeLine</h1></header>
                             
                             <div class="timeline">
-                                <div class="container left">
+                                <div class="container {{(($index%2.0)==0)?'left':'right'}}" ng-repeat="item in infos">
                                   <div class="content">
-                                    <h2>Jan, 2012</h2>
-                                    <h5>SSC - MGHS - Magura</h5>
-                                    <p>Completed.....</p>
+                                    <h2>{{item.date}}</h2>
+                                    <h5>{{item.position}} - {{item.company}} - {{item.location}}</h5>
+                                    <p>{{item.details}}</p>
                                   </div>
                                 </div>
+                                <!--
                                 <div class="container right">
                                   <div class="content">
                                     <h2>Jun, 2016</h2>
@@ -86,6 +87,7 @@
                                       <p>Running.....</p>
                                     </div>
                                   </div>
+                                  -->
                               </div>
                         </section>
                     </main>
@@ -145,11 +147,10 @@
               $scope.objectives = "";
               var item = null;
 
-              var url = "https://madcoderbubt.github.io/MadCoderPersonal/Data/about.json";
+              var url = "https://madcoderbubt.github.io/MadCoderPersonal/Data/timeline.json";
               $http.get(url)
               .then(function(response){
-                  $scope.info = response.data.data.info;
-                  $scope.objectives = response.data.data.objectives;
+                  $scope.infos = response.data.data;
                   //console.log(response.data.data);
               });
               //console.log($scope.info);
