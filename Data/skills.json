@@ -49,6 +49,12 @@
                 "name":"Adobe Photoshop"
             },{
                 "name":"MS Office 16"
+            },{
+                "name":"C/C++"
+            },{
+                "name":"Java"
+            },{
+                "name":"XML/XAML"
             }
         ]
     }

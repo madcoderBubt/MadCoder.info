@@ -147,11 +147,11 @@
                                     <tbody>
                                         <tr>
                                             <th>Framework</th>
-                                            <th>Design</th>
+                                            <th>Others</th>
                                         </tr>
-                                        <tr ng-repeat="item in addSkills.'DevFrameworks'">
+                                        <tr ng-repeat="item in addSkills.DevFrameworks">
                                             <td>{{item.name}}</td>
-                                            <td>{{addSkills.GraphicsDesign[$index]}}</td>
+                                            <td>{{addSkills.GraphicsDesign[$index].name}}</td>
                                         </tr>
                                         <!--
                                         <tr>
@@ -239,7 +239,7 @@
                 });
                 //console.log($scope.info);
             });
-            
+
             app.controller('ctrlMe', function($scope,$http) {
                 $scope.info = "";
                 $scope.objectives = "";
