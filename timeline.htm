@@ -91,35 +91,35 @@
                     </main>
                 </div><!--End of Main Page Area-->
 
-                <div class="column sidePage">
-                    <section class="">
-                        <figure>
-                            <img src="Content/avator.jpg" alt="avator">
-                            <figcaption class="txtWhite txtUpper">
-                                <h3>Sudhananda Biswas</h3>
-                                <span>.Net Developer</span>
-                            </figcaption>
-                        </figure>
-                        <p class="txtWhite marginDown">
-                            Hi, I am Sudhananda Biswas, a .NET Developer(C#, ASP). I have been working on 
-                            C# language since 2016. Working with ASP .NET has been 2 years passed since 2017 
-                            and still learning.
-                        </p>
-                        <hr class="centerItem" style="width:50%">
-                        <p class="txtWhite center"><i class="fas fa-map-marker-alt"></i>&ThickSpace; Mirpur, Dhaka</p>
-                        <hr class="centerItem marginDown" style="width:50%">
-                        <p class="txtWhite center"><small>My Social Link</small></p>
-                        <div class="socialLinks">
-                            <div><a href="http://facebook.com/MadCoderBubt" target="_blank" ><i class="fab fa-facebook-f"></i></a></div>
-                            <div><a href="http://twitter.com/shbsovon" target="_blank" ><i class="fab fa-twitter"></i></a></div>
-                            <div><a href="http://linkedin.com/in/MadCoder-bubt" target="_blank" ><i class="fab fa-linkedin-in"></i></a></div>
-                            <div><a href="http://github.com/MadCoderBubt" target="_blank" ><i class="fab fa-github"></i></a></div>
-                            <div><a href="skype:shbsovon" target="_blank" ><i class="fab fa-skype"></i></a></div>
-                        </div>
-                    </section>
-                </div>
+                <div class="column sidePage" ng-controller="ctrlMe">
+                  <section class="">
+                      <figure>
+                          <img src="{{info.avatar}}" alt="avator">
+                          <figcaption class="txtWhite txtUpper">
+                              <h3>{{info.fName}}</h3>
+                              <span>{{info.designation}}</span>
+                          </figcaption>
+                      </figure>
+                      <p class="txtWhite marginDown">
+                          {{info.objective}}
+                      </p>
+                      <hr class="centerItem" style="width:50%">
+                      <p class="txtWhite center"><i class="fas fa-map-marker-alt"></i>&ThickSpace; {{info.address}}</p>
+                      <hr class="centerItem marginDown" style="width:50%">
+                      <p class="txtWhite center"><small>My Social Link</small></p>
+                      <div class="socialLinks">
+                          <div title="{{item.title}}" ng-repeat="item in socialLinks"><a href="{{item.link}}" target="_blank" ><i class="{{item.icon}}"></i></a></div>
+                          <!--
+                          <div title="Facebook"><a href="http://facebook.com/MadCoderBubt" target="_blank" ><i class="fab fa-facebook-f"></i></a></div>
+                          <div title="Twitter"><a href="http://twitter.com/shbsovon" target="_blank" ><i class="fab fa-twitter"></i></a></div>
+                          <div title="LinkedIn"><a href="http://linkedin.com/in/MadCoder-bubt" target="_blank" ><i class="fab fa-linkedin-in"></i></a></div>
+                          <div title="Github"><a href="http://github.com/MadCoderBubt" target="_blank" ><i class="fab fa-github"></i></a></div>
+                          <div title="Skype"><a href="skype:shbsovon" target="_blank" ><i class="fab fa-skype"></i></a></div>
+                          -->
+                      </div>
+                  </section>
+              </div>
 
-                
             </div><!--Row-->
             <footer class="">Copyright&copy;2019, MadCoder.Info</footer>
         </div><!--Page-->
