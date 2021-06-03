@@ -52,7 +52,8 @@
 	transform:translate(0,0);
 }
 .closeYbox{
-	background:#fff;
+	/*background:#fff;*/
+	background-color: skyblue;
 	background-size:100% 100%;
 	width:35px;
 	height:35px;
@@ -69,7 +70,7 @@
 .closeYbox::before,
 .closeYbox::after{
 	content:'';
-	background-color:#616161;
+	background-color:#fff;
 	width:71%;
 	height:2px;
 	position:absolute;
@@ -126,6 +127,7 @@
 	padding:10px;
 	max-height:-webkit-calc(100vh - 10px);
 	max-height:calc(100vh - 10px);
+	background-color: skyblue;
 }
 .yBoxFrame.yBoxImgWrap img.yBoxImg{
 	max-width:-webkit-calc(100vw - 50px);
@@ -137,7 +139,7 @@
 .yBoxFrame.yBoxImgWrap .yBoxNextImg,
 .yBoxFrame.yBoxImgWrap .yBoxPrevImg{
 	background:none;
-	width:30%;
+	width:200px;
 	height:100%;
 	position:absolute;
 	top:0;
@@ -145,6 +147,10 @@
 	outline:none;
 	cursor:pointer;
 	z-index:2;
+}
+.yBoxFrame.yBoxImgWrap .yBoxNextImg:hover,
+.yBoxFrame.yBoxImgWrap .yBoxPrevImg:hover{
+	background-color:#6495ed5c;
 }
 .yBoxFrame.yBoxImgWrap .yBoxNextImg{left:0;}
 .yBoxFrame.yBoxImgWrap .yBoxPrevImg{right:0;}
@@ -159,12 +165,12 @@
 	border-left:3px solid rgba(255,255,255,0.7);
 }
 .yBoxFrame.yBoxImgWrap .yBoxPrevImg::after{
-	right:50px;
+	right:50%;
 	-webkit-transform:translate(0,-50%) rotate(-135deg);
 	transform:translate(0,-50%) rotate(-135deg);
 }
 .yBoxFrame.yBoxImgWrap .yBoxNextImg::after{
-	left:50px;
+	left:50%;
 	-webkit-transform:translate(0,-50%) rotate(45deg);
 	transform:translate(0,-50%) rotate(45deg);
 }

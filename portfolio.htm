@@ -15,7 +15,7 @@
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" 
             integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous"/>
         
-        <link rel="stylesheet" href="plugins/css/yBox.min.css">
+        <link rel="stylesheet" href="plugins/css/yBox.css">
         <link rel="stylesheet" type="text/css" href="CSS/Site.css"/>
         <link rel="stylesheet" type="text/css" href="CSS/responsive.css"/>
         <link rel="stylesheet" href="CSS/portfolio.css">
@@ -40,7 +40,7 @@
                     </nav>
                 </div><!--Side Menu Bar-->
 
-                <div class="column mainPage">
+                <div class="column mainPage" ng-controller="ctrlProtfolio">
                     <main id="pageIn">
                         <section id="">
                             <!--
@@ -52,12 +52,13 @@
                                     <h1>Web Dev</h1>
                                 </header>
                                 <div class="galleryBody">
-                                    <div class="galleryBox">
-                                        <img src="Content/gallery/img_1.jpg" alt="" srcset="">
+                                    <div class="galleryBox" ng-repeat="item in items">
+                                        <img src="{{item.srcImg}}" alt="" srcset="">
                                         <div class="overlay">
-                                            <a href="https://github.com"><i class="fas fa-eye"></i></a>
+                                            <a href="{{item.srcImg}}" data-ybox-group="{{item.group}}" data-ybox-title="Image" class="yBox"><i class="fas fa-eye"></i></a>
                                         </div>
                                     </div>
+                                    <!--
                                     <div class="galleryBox">
                                         <img src="Content/gallery/img_3.jpg" alt="" srcset="">
                                         <div class="overlay">
@@ -88,6 +89,7 @@
                                             <a href="https://github.com"><i class="fas fa-eye"></i></a>
                                         </div>
                                     </div>
+                                    -->
                                 </div> 
                                 <footer>
                                     Date: 1 Jun, 21
@@ -197,16 +199,16 @@
             });
 
             var app = angular.module('myApp', []);
-            app.controller('myCtrl', function($scope,$http) {
+            app.controller('ctrlProtfolio', function($scope,$http) {
                 $scope.info = "";
                 $scope.objectives = "";
                 var item = null;
 
-                var url = "https://madcoderbubt.github.io/MadCoderPersonal/Data/about.json";
+                var url = "https://madcoderbubt.github.io/MadCoderPersonal/Data/portfolio.json";
                 $http.get(url)
                 .then(function(response){
-                    $scope.info = response.data.data.info;
-                    $scope.objectives = response.data.data.objectives;
+                    $scope.items = response.data.data;
+                    //$scope.objectives = response.data.data.objectives;
                     //console.log(response.data.data);
                 });
                 //console.log($scope.info);
