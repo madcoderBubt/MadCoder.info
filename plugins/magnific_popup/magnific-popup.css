@@ -304,8 +304,12 @@ img.mfp-img {
 
 @media screen and (max-width: 800px) and (orientation: landscape), screen and (max-height: 300px) {
   /**
-       * Remove all paddings around the image on small screen
-       */
+  * Remove all paddings around the image on small screen
+  */
+  .mfp-figure figure > figcaption{
+    background-color: transparent;
+  }
+
   .mfp-img-mobile .mfp-image-holder {
     padding-left: 0;
     padding-right: 0; }
@@ -322,6 +326,7 @@ img.mfp-img {
     bottom: 0;
     margin: 0;
     top: auto;
+    left: 0;
     padding: 3px 5px;
     position: fixed;
     box-sizing: border-box; }

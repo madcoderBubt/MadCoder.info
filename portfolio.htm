@@ -50,12 +50,12 @@
                                 Right Down Here....
                             -->
 
-                            <article class="galleryView">
+                            <article class="galleryView" ng-repeat="list in lists">
                                 <header>
-                                    <h1>Web Dev</h1>
+                                    <h1>{{list.group}}</h1>
                                 </header>
                                 <div class="galleryBody">
-                                    <div class="galleryBox" ng-repeat="item in items">
+                                    <div class="galleryBox" ng-repeat="item in list.items">
                                         <img src="{{item.srcImg}}" alt="" srcset="">
                                         <div class="overlay">
                                             <a href="{{item.srcImg}}" data-ybox-group="{{item.group}}" data-ybox-title="Image" class="yBox"><i class="fas fa-eye"></i></a>
@@ -213,11 +213,13 @@
                 var url = "https://madcoderbubt.github.io/MadCoderPersonal/Data/portfolio.json";
                 $http.get(url)
                 .then(function(response){
-                    $scope.items = response.data.data;
+                    $scope.lists = response.data.data;
                     //$scope.objectives = response.data.data.objectives;
                     //console.log(response.data.data);
                 });
                 //console.log($scope.info);
+
+
             });
             app.controller('ctrlMe', function($scope,$http) {
                 $scope.info = "";
@@ -242,6 +244,7 @@
                 myYbox.init();
                 }
             };
+            
             $(document).ready(function() {
             $('#magnifiGallery').magnificPopup({
                 delegate: 'a',

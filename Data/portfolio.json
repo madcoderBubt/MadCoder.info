@@ -2,61 +2,76 @@
     "title":"portfolio gallery",
     "data":[
         {
-            "srcImg":"Content/gallery/img_web1.jpg",
-            "altText":"Something",
-            "liveLink":"",
-            "detailLink":"https://github.com/madcoderBubt/BookStore",
-            "description":"Gallery View",
-            "heading":"BookStore",
-            "group":"web"
+            "gropp":"web",
+            "items":[
+                {
+                    "srcImg":"Content/gallery/img_web1.jpg",
+                    "altText":"Something",
+                    "liveLink":"",
+                    "detailLink":"https://github.com/madcoderBubt/BookStore",
+                    "description":"Gallery View",
+                    "heading":"BookStore",
+                    "group":"web"
+                },{
+                    "srcImg":"Content/gallery/img_web2.jpg",
+                    "altText":"Something",
+                    "liveLink":"",
+                    "detailLink":"https://github.com/madcoderBubt/BookStore",
+                    "description":"Cart Checkout View",
+                    "heading":"BookStore",
+                    "group":"web"
+                },{
+                    "srcImg":"Content/gallery/img_web3.jpg",
+                    "altText":"Something",
+                    "liveLink":"",
+                    "detailLink":"https://github.com/madcoderBubt/BookStore",
+                    "description":"Admin Panel View",
+                    "heading":"BookStore",
+                    "group":"web"
+                },{
+                    "srcImg":"Content/gallery/img_web4.jpg",
+                    "altText":"Something",
+                    "liveLink":"",
+                    "detailLink":"https://github.com/madcoderBubt/BookStore",
+                    "description":"Order List View",
+                    "heading":"BookStore",
+                    "group":"web"
+                }
+            ]
         },{
-            "srcImg":"Content/gallery/img_web2.jpg",
-            "altText":"Something",
-            "liveLink":"",
-            "detailLink":"https://github.com/madcoderBubt/BookStore",
-            "description":"Cart Checkout View",
-            "heading":"BookStore",
-            "group":"web"
+            "group":"mobile",
+            "items":[
+                {
+                    "srcImg":"Content/gallery/Hungryplan 1.jpg",
+                    "altText":"Something",
+                    "liveLink":"",
+                    "detailLink":"https://github.com/madcoderBubt/FoodReview",
+                    "description":"Review a Resturant",
+                    "heading":"FoodReview",
+                    "group":"mobile"
+                },{
+                    "srcImg":"Content/gallery/Hungryplan 2.jpg",
+                    "altText":"Something",
+                    "liveLink":"",
+                    "detailLink":"https://github.com/madcoderBubt/FoodReview",
+                    "description":"Find Resturant",
+                    "heading":"FoodReview",
+                    "group":"mobile"
+                },{
+                    "srcImg":"Content/gallery/Hungryplan 3.jpg",
+                    "altText":"Something",
+                    "liveLink":"",
+                    "detailLink":"https://github.com/madcoderBubt/FoodReview",
+                    "description":"Login or Register",
+                    "heading":"FoodReview",
+                    "group":"mobile"
+                }
+            ]
         },{
-            "srcImg":"Content/gallery/img_web3.jpg",
-            "altText":"Something",
-            "liveLink":"",
-            "detailLink":"https://github.com/madcoderBubt/BookStore",
-            "description":"Admin Panel View",
-            "heading":"BookStore",
-            "group":"web"
-        },{
-            "srcImg":"Content/gallery/img_web4.jpg",
-            "altText":"Something",
-            "liveLink":"",
-            "detailLink":"https://github.com/madcoderBubt/BookStore",
-            "description":"Order List View",
-            "heading":"BookStore",
-            "group":"web"
-        },{
-            "srcImg":"Content/gallery/Hungryplan 1.jpg",
-            "altText":"Something",
-            "liveLink":"",
-            "detailLink":"https://github.com/madcoderBubt/FoodReview",
-            "description":"Review a Resturant",
-            "heading":"FoodReview",
-            "group":"mobile"
-        },{
-            "srcImg":"Content/gallery/Hungryplan 2.jpg",
-            "altText":"Something",
-            "liveLink":"",
-            "detailLink":"https://github.com/madcoderBubt/FoodReview",
-            "description":"Find Resturant",
-            "heading":"FoodReview",
-            "group":"mobile"
-        },{
-            "srcImg":"Content/gallery/Hungryplan 3.jpg",
-            "altText":"Something",
-            "liveLink":"",
-            "detailLink":"https://github.com/madcoderBubt/FoodReview",
-            "description":"Login or Register",
-            "heading":"FoodReview",
-            "group":"mobile"
-        }
+            "group":"software",
+            "items":[
+
+            ]
+        }     
     ]
 }
