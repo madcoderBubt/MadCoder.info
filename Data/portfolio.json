@@ -3,6 +3,7 @@
     "data":[
         {
             "group":"web",
+            "lastModified":"6 June, 2021",
             "items":[
                 {
                     "srcImg":"Content/gallery/img_web1.jpg",
@@ -36,10 +37,27 @@
                     "description":"Order List View",
                     "heading":"BookStore",
                     "group":"web"
+                },{
+                    "srcImg":"Content/gallery/img_ad1.jpg",
+                    "altText":"Something",
+                    "liveLink":"https://classified.ajkerdeal.com",
+                    "detailLink":"",
+                    "description":"Login Popup model design",
+                    "heading":"Ajkerdeal",
+                    "group":"web"
+                },{
+                    "srcImg":"Content/gallery/img_ad2.jpg",
+                    "altText":"Something",
+                    "liveLink":"https://ajkerdeal.com",
+                    "detailLink":"",
+                    "description":"Category based product filtering with jQuery",
+                    "heading":"Ajkerdeal HotDeal",
+                    "group":"web"
                 }
             ]
         },{
             "group":"mobile",
+            "lastModified":"1 June, 2021",
             "items":[
                 {
                     "srcImg":"Content/gallery/Hungryplan 1.jpg",
@@ -69,6 +87,7 @@
             ]
         },{
             "group":"software",
+            "lastModified":"1 June, 2021",
             "items":[
 
             ]
