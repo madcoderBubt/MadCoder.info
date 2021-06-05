@@ -58,48 +58,17 @@
                                     <div class="galleryBox" ng-repeat="item in list.items">
                                         <img src="{{item.srcImg}}" alt="" srcset="">
                                         <div class="overlay">
-                                            <a href="{{item.srcImg}}" data-ybox-group="{{item.group}}" data-ybox-title="Image" class="yBox"><i class="fas fa-eye"></i></a>
+                                            <a href="{{item.srcImg}}" title="{{item.heading}}" description="{{item.description}}"><i class="fas fa-eye"></i></a>
                                         </div>
                                     </div>
-                                    <!--
-                                    <div class="galleryBox">
-                                        <img src="Content/gallery/img_3.jpg" alt="" srcset="">
-                                        <div class="overlay">
-                                            <a href="https://github.com"><i class="fas fa-eye"></i></a>
-                                        </div>
-                                    </div>
-                                    <div class="galleryBox">
-                                        <img src="Content/gallery/img_1.jpg" alt="" srcset="">
-                                        <div class="overlay">
-                                            <a href="https://github.com"><i class="fas fa-eye"></i></a>
-                                        </div>
-                                    </div>
-                                    <div class="galleryBox">
-                                        <img src="Content/gallery/img_2.jpg" alt="" srcset="">
-                                        <div class="overlay">
-                                            <a href="https://github.com"><i class="fas fa-eye"></i></a>
-                                        </div>
-                                    </div>
-                                    <div class="galleryBox">
-                                        <img src="Content/gallery/img_1.jpg" alt="" srcset="">
-                                        <div class="overlay">
-                                            <a href="https://github.com"><i class="fas fa-eye"></i></a>
-                                        </div>
-                                    </div>
-                                    <div class="galleryBox">
-                                        <img src="Content/gallery/img_3.jpg" alt="" srcset="">
-                                        <div class="overlay">
-                                            <a href="https://github.com"><i class="fas fa-eye"></i></a>
-                                        </div>
-                                    </div>
-                                    -->
+                                    <p class="statusBox" ng-show="!list.items.length">{{list.items.length}} items found.</p>
                                 </div> 
                                 <footer>
                                     Date: 1 Jun, 21
                                 </footer>
                             </article>
-
-                            <article class="galleryView">
+                            <!-- Demo gallery
+                            <article class="galleryView" style="display: none;">
                                 <header>
                                     <h1>Soft Dev</h1>
                                 </header>
@@ -145,11 +114,11 @@
                                     Date: 1 Jun, 21
                                 </footer>
                             </article>
-
+                            -->
                         </section>
                     </main>
                 </div>
-
+                
                 <div class="column sidePage" ng-controller="ctrlMe">
                     <section class="">
                         <figure>
@@ -215,7 +184,7 @@
                 .then(function(response){
                     $scope.lists = response.data.data;
                     //$scope.objectives = response.data.data.objectives;
-                    //console.log(response.data.data);
+                    console.log(response.data.data);
                 });
                 //console.log($scope.info);
 
@@ -246,23 +215,25 @@
             };
             
             $(document).ready(function() {
-            $('#magnifiGallery').magnificPopup({
-                delegate: 'a',
-                type: 'image',
-                tLoading: 'Loading image #%curr%...',
-                mainClass: 'mfp-img-mobile',
-                gallery: {
-                    enabled: true,
-                    navigateByImgClick: true,
-                    preload: [0,1] // Will preload 0 - before current, and 1 after the current image
-                },
-                image: {
-                    tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
-                    titleSrc: function(item) {
-                    return item.el.attr('title') + '<small>'+item.el.attr('description')+'</small>';
-                    }
-                }
-                });
+                setTimeout(() => {
+                    $('.galleryBody').magnificPopup({
+                        delegate: 'a',
+                        type: 'image',
+                        tLoading: 'Loading image #%curr%...',
+                        mainClass: 'mfp-img-mobile',
+                        gallery: {
+                            enabled: true,
+                            navigateByImgClick: true,
+                            preload: [0,1] // Will preload 0 - before current, and 1 after the current image
+                        },
+                        image: {
+                            tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
+                            titleSrc: function(item) {
+                            return item.el.attr('title') + '<small>'+item.el.attr('description')+'</small>';
+                            }
+                        }
+                    });
+                }, 1000);
             });
         </script>
     </body>

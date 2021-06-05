@@ -2,7 +2,7 @@
     "title":"portfolio gallery",
     "data":[
         {
-            "gropp":"web",
+            "group":"web",
             "items":[
                 {
                     "srcImg":"Content/gallery/img_web1.jpg",

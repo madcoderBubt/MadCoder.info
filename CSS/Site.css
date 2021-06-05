@@ -526,4 +526,11 @@ table.skills > tbody th{
     height: 262px;
     z-index: 7;
   }
-  
+  .statusBox{
+    text-align: center;
+    color: brown;
+    font-weight: bold;
+    padding-bottom: 10px;
+    width: 100%;
+    text-decoration: underline double brown;
+  }
