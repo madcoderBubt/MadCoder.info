@@ -159,12 +159,12 @@ figure{
 }
 figure > figcaption {
     position: absolute;
-    bottom: 2px;
-    height: 70px;
+    bottom: 0;
+    min-height: 55px;
     width: 100%;
     background-color: rgba(51, 102, 153, .5);
     text-align: center;
-    padding: 8px 0;
+    padding: 8px 5px;
     font-family: titleText;
 }
 .txtUpper{

@@ -15,7 +15,10 @@
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" 
             integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous"/>
         
-        <link rel="stylesheet" href="plugins/css/yBox.css">
+        <!--Popup Box-->
+        <link rel="stylesheet" href="plugins/yBox/css/yBox.css">
+        <link rel="stylesheet" href="plugins/magnific_popup/magnific-popup.css">
+
         <link rel="stylesheet" type="text/css" href="CSS/Site.css"/>
         <link rel="stylesheet" type="text/css" href="CSS/responsive.css"/>
         <link rel="stylesheet" href="CSS/portfolio.css">
@@ -100,23 +103,23 @@
                                 <header>
                                     <h1>Soft Dev</h1>
                                 </header>
-                                <div class="galleryBody">
+                                <div class="galleryBody" id="magnifiGallery">
                                     <div class="galleryBox">
                                         <img src="Content/gallery/img_1.jpg" alt="" srcset="">
                                         <div class="overlay">
-                                            <a href="Content/gallery/img_1.jpg" data-ybox-group="group1" class="yBox"><i class="fas fa-eye"></i></a>
+                                            <a href="Content/gallery/img_1.jpg" title="Test is good" description="Hello"><i class="fas fa-eye"></i></a>
                                         </div>
                                     </div>
                                     <div class="galleryBox">
                                         <img src="Content/gallery/img_3.jpg" alt="" srcset="">
                                         <div class="overlay">
-                                            <a href="https://github.com"><i class="fas fa-eye"></i></a>
+                                            <a href="Content/gallery/img_3.jpg"><i class="fas fa-eye"></i></a>
                                         </div>
                                     </div>
                                     <div class="galleryBox">
                                         <img src="Content/gallery/img_1.jpg" alt="" srcset="">
                                         <div class="overlay">
-                                            <a href="https://github.com"><i class="fas fa-eye"></i></a>
+                                            <a href="Content/gallery/img_1.jpg"><i class="fas fa-eye"></i></a>
                                         </div>
                                     </div>
                                     <div class="galleryBox">
@@ -183,8 +186,11 @@
         <!--Javascript-->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> 
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
-        <script src="plugins/js/directive.js"></script>
-        <script src="plugins/js/yBox.min.js"></script>
+        
+        <!--Popup Box-->
+        <script src="plugins/yBox/js/directive.js"></script>
+        <script src="plugins/yBox/js/yBox.min.js"></script>
+        <script src="plugins/magnific_popup/jquery.magnific-popup.js"></script>
 
         <script src="js/custom.js"></script>
         <script>
@@ -236,6 +242,25 @@
                 myYbox.init();
                 }
             };
+            $(document).ready(function() {
+            $('#magnifiGallery').magnificPopup({
+                delegate: 'a',
+                type: 'image',
+                tLoading: 'Loading image #%curr%...',
+                mainClass: 'mfp-img-mobile',
+                gallery: {
+                    enabled: true,
+                    navigateByImgClick: true,
+                    preload: [0,1] // Will preload 0 - before current, and 1 after the current image
+                },
+                image: {
+                    tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
+                    titleSrc: function(item) {
+                    return item.el.attr('title') + '<small>'+item.el.attr('description')+'</small>';
+                    }
+                }
+                });
+            });
         </script>
     </body>
 </html>
