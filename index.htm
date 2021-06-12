@@ -38,7 +38,7 @@
                 </div><!--Side Menu Bar-->
 
                 <div class="column mainPage">
-                    <main id="pageIn"  ng-controller="myCtrl">
+                    <main id="pageIn"  ng-controller="myAboutCtrl">
                         <section>
                             <header class="txtBlue"><h1><i class="fas fa-plus-circle"></i>&ThickSpace; About Me</h1></header>
                             <h3 class="title">Mad Coder</h3>
@@ -113,6 +113,7 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
         <script src="js/custom.js"></script>
+        <script src="js/myApp.js"></script>
         <script>
             $(document).ready(function (){
 
@@ -123,9 +124,9 @@
                 //});
 
             });
-
+/*
             var app = angular.module('myApp', []);
-            app.controller('myCtrl', function($scope,$http) {
+            app.controller('myAboutCtrl', function($scope,$http) {
                 $scope.info = "";
                 $scope.objectives = "";
                 var item = null;
@@ -153,7 +154,7 @@
                 });
                 //console.log($scope.info);
             });
-
+*/
         </script>
     </body>
 </html>

@@ -89,7 +89,15 @@
             "group":"software",
             "lastModified":"1 June, 2021",
             "items":[
-
+                {
+                    "srcImg":"Content/gallery/img_des1.jpg",
+                    "altText":"Something",
+                    "liveLink":"",
+                    "detailLink":"https://stdlbd.com",
+                    "description":"Work with C#, TSQL, RDLC Report",
+                    "heading":"PoS for clients",
+                    "group":"mobile"
+                }
             ]
         }     
     ]
