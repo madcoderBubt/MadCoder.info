@@ -3,21 +3,21 @@ var app = angular.module('myApp', [])
 .config(['$compileProvider', function ($compileProvider) {
     $compileProvider.aHrefSanitizationWhitelist(/^\s*(https?|ftp|mailto|skype|javascript):/);
 }]);
-
 app.filter('filterEdu',function(){
     //console.log("hello");
-    return function(input)
+    return function(x)
     {
-        var temp = input.filter(d=>d.type=="education");
+        var temp = x.filter(d=>d.type=="education");
         //console.log(temp);
         return temp;
     }
 });
 app.filter('filterJob',function(){
     //console.log("hello");
-    return function(input)
+    return function(x)
     {
-        var temp = input.filter(d=>d.type=="work");
+        //console.log(x);
+        var temp = x.filter(i=>i.type=="work");
         //console.log(temp);
         return temp;
     }

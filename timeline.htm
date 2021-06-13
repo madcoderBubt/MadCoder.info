@@ -44,7 +44,7 @@
                             <header class="txtBlue"><h1><i class="fas fa-plus-circle"></i>&ThickSpace; My TimeLine</h1></header>
                             
                             <div class="timeline">
-                                <div class="container {{(($index%2.0)==0)?'left':'right'}}" ng-repeat="item in infos">
+                                <div class="container {{(($index%2.0)==0)?'left':'right'}}" ng-repeat="item in infos | filterJob">
                                   <div class="content">
                                     <h2>{{item.date}}</h2>
                                     <h5>{{item.position}} - {{item.company}} - {{item.location}}</h5>
