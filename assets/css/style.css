@@ -270,6 +270,10 @@ body {
       padding-bottom: 0px; }
     .profile-box .left-side .social-link li {
       padding: 10px 15px; }
+      .profile-box .left-side .social-link li a{
+        color:#fff;
+        text-decoration: none;
+      }
     .profile-box .left-side .refer-cov {
       padding: 8px; }
       .profile-box .left-side .refer-cov b {
@@ -383,3 +387,8 @@ body {
     background-color: #00ab9f; }
 
 /*# sourceMappingURL=style.css.map */
+@media print{
+  .no-print{
+    display: none;
+  }
+}

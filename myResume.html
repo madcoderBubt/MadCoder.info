@@ -18,11 +18,11 @@
         <div class="container profile-box">
             <div class="row">
                 <div class="col-md-4 left-co">
-                    <div class="left-side">
+                    <div class="left-side" ng-controller="ctrlMe">
                         <div class="profile-info">
-                            <img src="assets/images/profile.jpg" alt="">
-                            <h3>Jonney Anderson</h3>
-                            <span>Web Designer</span>
+                            <img src="{{info.avatar}}" alt="">
+                            <h3>{{info.fName}}</h3>
+                            <span>{{info.designation}}</span>
                         </div>
                         <h4 class="ltitle">Contact</h4>
                         <div class="contact-box pb0">
@@ -30,8 +30,8 @@
                                 <i class="fas fa-phone"></i>
                             </div>
                             <div class="detail">
-                                +123 8767 5465 <br>
-                                +122 2345 3763
+                                {{info.phone}} <br>
+                                <i class="fab fa-skype"></i> {{info.skype}}
                             </div>
                         </div>
                         <div class="contact-box pb0">
@@ -39,8 +39,8 @@
                                 <i class="fas fa-globe-americas"></i>
                             </div>
                             <div class="detail">
-                                info@smarteyeapps.com <br>
-                                www.smarteyeapps.com
+                                {{info.email}} <br>
+                                {{info.Website}}
                             </div>
                         </div>
                         <div class="contact-box">
@@ -48,16 +48,18 @@
                                 <i class="fas fa-map-marker-alt"></i>
                             </div>
                             <div class="detail">
-                                First Floor,Vincent Plaza, Toranto, Canada
+                                {{info.address}}
                             </div>
                         </div>
                         <h4 class="ltitle">Contact</h4>
-                        <ul class="row social-link no-margin">
-                            <li><i class="fab fa-facebook-f"></i></li>
+                        <ul class="row social-link no-margin" >
+                            <li ng-repeat="i in socialLinks"><a href="{{i.link}}"><i class="{{i.icon}}"></i></a></li>
+                            <!--
                             <li><i class="fab fa-twitter"></i></li>
                             <li><i class="fab fa-google-plus-g"></i></li>
                             <li><i class="fab fa-linkedin-in"></i></li>
                             <li><i class="fab fa-github"></i></li>
+                            -->
                         </ul>
                         <h4 class="ltitle">Referencess</h4>
 
@@ -84,24 +86,26 @@
                 </div>
                 <div class="col-md-8 rt-div">
                     <div class="rit-cover">
+                    <section ng-controller="ctrlMe">
                         <div class="hotkey">
-                            <h1 class="">Jonney Anderson </h1>
-                            <small>Web Designer</small>
+                            <h1 class="">{{info.fName}}</h1>
+                            <small>{{info.designation}}</small>
                         </div>
                         <h2 class="rit-titl"><i class="far fa-user"></i> Profile</h2>
                         <div class="about">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis accumsan purus enim, a vestibulum est tristique sit amet. Suspendisse nibh nisl, imperdiet sit amet mi vitae, elementum elementum nibh. Vivamus vitae eros malesuada, convallis dolor malesuada, lobortis ex. Sed cursus augue risus, ac semper est consectetur vitae. Praesent consequat metus sit amet rhoncus luctus.</p>
-                            <div class="btn-ro row no-margin">
+                            <p>{{info.objective}}</p>
+                            <div class="btn-ro row no-margin no-print">
                                 <ul class="btn-link">
                                     <li>
-                                        <a href=""><i class="fas fa-paper-plane"></i> Hire Me</a>
+                                        <a href="mailto://shbsovon@outlook.com"><i class="fas fa-paper-plane"></i> Hire Me</a>
                                     </li>
                                     <li>
-                                        <a href=""><i class="fas fa-cloud-download-alt"></i> Download Resume</a>
+                                        <a href="#" onclick="window.print()"><i class="fas fa-cloud-download-alt"></i> Download Resume</a>
                                     </li>
                                 </ul>
                             </div>
                         </div>
+                    </section>
 
                         <h2 class="rit-titl"><i class="fas fa-briefcase"></i> Work Experiance</h2>
                         <div ng-controller="myTimelineCtrl">                            
