@@ -12,7 +12,7 @@
     <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
 </head>
 
-<body>
+<body ng-app="myApp">
     <div class="container-fluid overcover">
         <div class="container profile-box">
             <div class="row">
@@ -103,7 +103,7 @@
                         </div>
 
                         <h2 class="rit-titl"><i class="fas fa-briefcase"></i> Work Experiance</h2>
-                        <div class="work-exp">
+                        <div class="work-exp" ng-controller="myTimelineCtrl" ng-repeat="item in infos | filterJob">
                             <h6>Junior Software Developer <span>2008-2011</span></h6>
                             <i>Microsoft / United States</i>
                             <ul>
@@ -112,6 +112,7 @@
                                 <li><i class="far fa-hand-point-right"></i> Porem ipsum sit amet, consectetur adipiscing </li>
                             </ul>
                         </div>
+                        <!--
                         <div class="work-exp">
                             <h6>Junior Software Developer <span>2008-2011</span></h6>
                             <i>Microsoft / United States</i>
@@ -132,18 +133,21 @@
                                 
                             </ul>
                         </div>
+                        -->
 
                         <h2 class="rit-titl"><i class="fas fa-graduation-cap"></i> Education</h2>
-                        <div class="education">
+                        <div class="education" ng-controller="myTimelineCtrl">
                             <ul class="row no-margin">
+                                <li class="col-md-6" ng-repeat="item in infos | filterEdu"><span>{{item.date}}</span> <br>
+                                    {{item.position}} - {{item.company}}</li>
+                                <!--
                                 <li class="col-md-6"><span>2013-2015</span> <br>
                                     Master Degree - Cambridg University</li>
                                 <li class="col-md-6"><span>2013-2015</span> <br>
                                     Master Degree - Cambridg University</li>
                                 <li class="col-md-6"><span>2013-2015</span> <br>
                                     Master Degree - Cambridg University</li>
-                                <li class="col-md-6"><span>2013-2015</span> <br>
-                                    Master Degree - Cambridg University</li>
+                                -->
                             </ul>
                         </div>
 
@@ -208,14 +212,21 @@
 </body>
 
 <script src="assets/js/jquery-3.2.1.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
 <script src="assets/js/popper.min.js"></script>
 <script src="assets/js/bootstrap.min.js"></script>
 <script src="assets/js/script.js"></script>
 <script src="js/myApp.js"></script>
 <script>
-    /*$(document).ready(function(){
+    /*
+    $(document).ready(function(){
         window.print();
-    });*/
+        //window.close();
+        setTimeout(() => {
+            window.onafterprint = window.close();
+        }, 500);
+    });
+    */
 </script>
 
 </html>

@@ -4,6 +4,25 @@ var app = angular.module('myApp', [])
     $compileProvider.aHrefSanitizationWhitelist(/^\s*(https?|ftp|mailto|skype|javascript):/);
 }]);
 
+app.filter('filterEdu',function(){
+    //console.log("hello");
+    return function(input)
+    {
+        var temp = input.filter(d=>d.type=="education");
+        //console.log(temp);
+        return temp;
+    }
+});
+app.filter('filterJob',function(){
+    //console.log("hello");
+    return function(input)
+    {
+        var temp = input.filter(d=>d.type=="work");
+        //console.log(temp);
+        return temp;
+    }
+});
+
 app.controller('myAboutCtrl', function($scope,$http) {
     $scope.info = "";
     $scope.objectives = "";
@@ -80,3 +99,4 @@ app.controller('ctrlMe', function($scope,$http) {
 app.controller('myMenuList',function($scope,$http){
     
 });
+

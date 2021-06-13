@@ -2,48 +2,56 @@
     "title":"timeline",
     "data":[
         {
+            "type":"education",
             "date":"Jan, 2012",
             "position":"SSC",
             "company":"MGHS",
             "location":"Magura",
             "details":"Completed my School Life"
         },{
+            "type":"work",
             "date":"Jun, 2016",
             "position":"Jr. Trainer",
             "company":"Engineer's IT",
             "location":"Jessore",
             "details":"Part-time Trainer of Basic Web Development"
         },{
+            "type":"work",
             "date":"Nov, 2016",
             "position":"Intern",
             "company":"New Horizon CLC",
             "location":"Dhaka",
             "details":"Programming in C# with ASP .Net MVC"
         },{
+            "type":"education",
             "date":"Feb, 2017",
             "position":"Diploma in CTech",
             "company":"JPI",
             "location":"Jessore",
             "details":"Attend various projects & Completed my Diploma."
         },{
+            "type":"work",
             "date":"Sep, 2019",
             "position":"Software Engineer(Contructual)",
             "company":"Asian Software Firm",
             "location":"Dhaka",
             "details":"Develop & maintain existing software"
         },{
+            "type":"work",
             "date":"Mar, 2021",
             "position":"Software Developer",
             "company":"STDL Bd",
             "location":"Dhaka",
             "details":"Develop Software & Web Application"
         },{
+            "type":"work",
             "date":"Jun, 2021",
             "position":"Intern .Net Developer",
             "company":"Ajkerdeal.com Ltd",
             "location":"Dhaka",
             "details":"Maintaining their existing website under a professional IT Team"
         },{
+            "type":"education",
             "date":"Dec, 2021",
             "position":"BSc Eng. in CSE",
             "company":"BUBT",
