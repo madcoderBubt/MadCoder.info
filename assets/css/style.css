@@ -240,7 +240,9 @@ body {
       color: #444;
       text-align: center; }
       .profile-box .left-side .profile-info img {
-        width: 100%; }
+        width: 100%; 
+        border-radius: 10px 10px 0 0;
+      }
       .profile-box .left-side .profile-info h3 {
         font-size: 1rem;
         margin-bottom: 0px;
@@ -390,5 +392,9 @@ body {
 @media print{
   .no-print{
     display: none;
+  }
+  .rit-cover .education ul li{
+    border:1px solid lightgray;
+    background-color: rgba(211, 211, 211, 0.2);
   }
 }

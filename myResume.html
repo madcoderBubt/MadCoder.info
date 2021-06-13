@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title> Free Dental Medical Hospital Website Template | Smarteyeapps.com</title>
+    <title>My Resume</title>
 
     <link rel="shortcut icon" href="assets/images/fav.jpg">
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
@@ -22,7 +22,7 @@
                         <div class="profile-info">
                             <img src="{{info.avatar}}" alt="">
                             <h3>{{info.fName}}</h3>
-                            <span>{{info.designation}}</span>
+                            <span>{{info.designation | uppercase}}</span>
                         </div>
                         <h4 class="ltitle">Contact</h4>
                         <div class="contact-box pb0">
@@ -40,7 +40,7 @@
                             </div>
                             <div class="detail">
                                 {{info.email}} <br>
-                                {{info.Website}}
+                                {{info.website}}
                             </div>
                         </div>
                         <div class="contact-box">
@@ -66,12 +66,12 @@
                         <div class="refer-cov">
                             <b>Jonney Smith</b>
                             <p>CEO Casinocarol</p>
-                            <span>p +00 890 1232 8767</span>
+                            <span><i class="fas fa-phone-square"></i> +00 890 1232 8767</span>
                         </div>
                         <div class="refer-cov">
                             <b>Jonney Smith</b>
                             <p>System Administrator</p>
-                            <span>p +00 890 1232 8767</span>
+                            <span><i class="fas fa-phone-square"></i> +00 890 1232 8767</span>
                         </div>
                         <h4 class="ltitle">Hobbies</h4>
                         <ul class="hoby row no-margin">
@@ -89,7 +89,7 @@
                     <section ng-controller="ctrlMe">
                         <div class="hotkey">
                             <h1 class="">{{info.fName}}</h1>
-                            <small>{{info.designation}}</small>
+                            <small>{{info.designation | uppercase}}</small>
                         </div>
                         <h2 class="rit-titl"><i class="far fa-user"></i> Profile</h2>
                         <div class="about">
@@ -224,15 +224,18 @@
 <script src="assets/js/script.js"></script>
 <script src="js/myApp.js"></script>
 <script>
-    /*
+    
     $(document).ready(function(){
-        window.print();
+        setTimeout(() => {
+            window.print();
+        }, 500);
+        
         //window.close();
         setTimeout(() => {
             window.onafterprint = window.close();
-        }, 500);
+        }, 1000);
     });
-    */
+    
 </script>
 
 </html>
