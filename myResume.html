@@ -63,24 +63,28 @@
                         </ul>
                         <h4 class="ltitle">Referencess</h4>
 
-                        <div class="refer-cov">
-                            <b>Jonney Smith</b>
-                            <p>CEO Casinocarol</p>
-                            <span><i class="fas fa-phone-square"></i> +00 890 1232 8767</span>
+                        <div class="refer-cov" ng-repeat="x in refs">
+                            <b>{{x.name}}</b>
+                            <p>{{x.designation + ", " + x.organization}}</p>
+                            <span><i class="fas fa-phone-square" ng-show="x.phone"></i> {{x.phone}}</span>
                         </div>
+                        <!--
                         <div class="refer-cov">
                             <b>Jonney Smith</b>
                             <p>System Administrator</p>
                             <span><i class="fas fa-phone-square"></i> +00 890 1232 8767</span>
                         </div>
+                        -->
                         <h4 class="ltitle">Hobbies</h4>
                         <ul class="hoby row no-margin">
-                            <li><i class="fas fa-pencil-alt"></i> <br> Writing</li>
+                            <li ng-repeat="x in hobbies"><i class="{{x.icon}}"></i> <br> {{x.title}}</li>
+                            <!--
                             <li><i class="fas fa-bicycle"></i> <br> Cycling</li>
                             <li><i class="fas fa-futbol"></i> <br> Football</li>
                             <li><i class="fas fa-film"></i><br> Movies</li>
                             <li><i class="fas fa-plane-departure"></i> <br>Travel</li>
                             <li><i class="fas fa-gamepad"></i> <br> Games</li>
+                            -->
                         </ul>
                     </div>
                 </div>

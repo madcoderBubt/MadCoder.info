@@ -91,6 +91,8 @@ app.controller('ctrlMe', function($scope,$http) {
     .then(function(response){
         $scope.info = response.data.data.info;
         $scope.socialLinks = response.data.data.socialLinks;
+        $scope.hobbies = response.data.data.hobbies;
+        $scope.refs = response.data.data.ref;
         //console.log(response.data.data);
     });
     //console.log($scope.info);

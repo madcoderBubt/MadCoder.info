@@ -35,6 +35,46 @@
                 "icon":"fab fa-skype",
                 "link":"skype:shbsovon"
             }
+        ],
+        "hobbies":[
+            {
+                "title":"Coding",
+                "icon":"fas fa-code"
+            },{
+                "title":"Movies",
+                "icon":"fas fa-film"
+            },{
+                "title":"Travel",
+                "icon":"fas fa-plane-departure"
+            },{
+                "title":"Games",
+                "icon":"fas fa-gamepad"
+            },{
+                "title":"Sleeping",
+                "icon":"fas fa-bed"
+            },{
+                "title":"Learning",
+                "icon":"fas fa-graduation-cap"
+            }
+        ],
+        "ref":[
+            {
+                "name":"Md. Mamunur Rashid",
+                "relation":"Professional",
+                "designation":"CEO",
+                "organization":"Asian Software Firm",
+                "phone":"8801841434977",
+                "email":"mamunbrother@gmail.com",
+                "website":""
+            },{
+                "name":"Milon Biswas",
+                "relation":"Academic",
+                "designation":"Assistant Professor",
+                "organization":"BUBT, Dhaka",
+                "phone":"",
+                "email":"milonbiswas@bubt.edu.bd",
+                "website":"https://askmeanything.info/"
+            }
         ]
     }
 }
