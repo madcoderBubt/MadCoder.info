@@ -66,7 +66,10 @@
                         <div class="refer-cov" ng-repeat="x in refs">
                             <b>{{x.name}}</b>
                             <p>{{x.designation + ", " + x.organization}}</p>
-                            <span><i class="fas fa-phone-square" ng-show="x.phone"></i> {{x.phone}}</span>
+                            <span>
+                                <i class="fas fa-phone-square" ng-show="x.phone"></i> {{x.phone}} <br ng-show="x.phone">
+                                <i class="fas fa-envelope-square" ng-show="x.email"></i> {{x.email}}
+                            </span>
                         </div>
                         <!--
                         <div class="refer-cov">

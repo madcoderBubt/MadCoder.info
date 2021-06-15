@@ -1,3 +1,8 @@
+let printResume = function(x){                
+    var printWindow = window.open("myResume.html","","width=900,height=500");
+    //printWindow.print();
+}
+
 //Angular app init
 var app = angular.module('myApp', [])
 .config(['$compileProvider', function ($compileProvider) {
