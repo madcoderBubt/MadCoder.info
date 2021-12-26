@@ -57,6 +57,13 @@
             "company":"BUBT",
             "location":"Dhaka",
             "details":"Attend various compitions, varsity projets & still continuing....."
+        },{
+            "type":"work",
+            "date":"Sept, 2021",
+            "position":"Jr. Software Engineer",
+            "company":"Global Software Architechts",
+            "location":"Dhaka",
+            "details":"Working on ASP.NET based web application with various js frame work such as angular."
         }
     ]
 }
