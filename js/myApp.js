@@ -66,7 +66,7 @@ app.controller('myTimelineCtrl', function($scope,$http) {
     $http.get(url)
     .then(function(response){
         let tmpData = response.data.data
-        $scope.infos = tmpData.sortBy(function(o){ return o.date });;
+        $scope.infos = tmpData.sortBy(function(o){ return new Date(o.date) });;
         //console.log(response.data.data);
     });
     //console.log($scope.info);
@@ -121,7 +121,7 @@ app.controller('myMenuList',function($scope,$http){
       }
       this.sort(function(a,b){
         for (var i=0,len=a.length;i<len;++i){
-          if (a[i]!=b[i]) return a[i]<b[i]?-1:1;
+          if (a[i]!=b[i]) return a[i]>b[i]?-1:1;
         }
         return 0;
       });
