@@ -3,7 +3,7 @@
     "skillHighlight":[
         {
             "name": "Coding",
-            "value": 85
+            "value": 95
         },{
             "name": "Data Structure",
             "value": 45
@@ -18,30 +18,34 @@
     "coreSkills":[
         {
             "name": "C#",
-            "value": 80
+            "value": 85
         },{
             "name": "JavaScript",
-            "value": 70
+            "value": 75
         },{
             "name": "HTML5 & CSS3",
             "value": 95
         },{
             "name": "MS-SQL (TSQL)",
-            "value": 60
+            "value": 65
         }
     ],
     "additionalSkills":{
         "DevFrameworks":[
             {
-                "name":".Net Framework"
+                "name":".Net Core"
             },{
-                "name":"ASP Core"
+                "name":"ASP MVC & WebApi"
             },{
                 "name":"jQuery"
             },{
-                "name":"AngularJs"
+                "name":"Angular 8/AngularJs"
             },{
-                "name":"Entity Framework"
+                "name":"Entity Framework/Ado.NET"
+            },{
+                "name":"xUnit"
+            },{
+                "name":"MicroServices"
             }
         ],
         "GraphicsDesign":[

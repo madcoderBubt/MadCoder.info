@@ -65,7 +65,8 @@ app.controller('myTimelineCtrl', function($scope,$http) {
     var url = "https://madcoderbubt.github.io/MadCoderPersonal/Data/timeline.json";
     $http.get(url)
     .then(function(response){
-        $scope.infos = response.data.data;
+        let tmpData = response.data.data
+        $scope.infos = tmpData.sortBy(function(o){ return o.date });;
         //console.log(response.data.data);
     });
     //console.log($scope.info);
@@ -107,3 +108,26 @@ app.controller('myMenuList',function($scope,$http){
     
 });
 
+(function(){
+    if (typeof Object.defineProperty === 'function'){
+      try{Object.defineProperty(Array.prototype,'sortBy',{value:sb}); }catch(e){}
+    }
+    if (!Array.prototype.sortBy) Array.prototype.sortBy = sb;
+  
+    function sb(f){
+      for (var i=this.length;i;){
+        var o = this[--i];
+        this[i] = [].concat(f.call(o,o,i),o);
+      }
+      this.sort(function(a,b){
+        for (var i=0,len=a.length;i<len;++i){
+          if (a[i]!=b[i]) return a[i]<b[i]?-1:1;
+        }
+        return 0;
+      });
+      for (var i=this.length;i;){
+        this[--i]=this[i][this[i].length-1];
+      }
+      return this;
+    }
+  })();
